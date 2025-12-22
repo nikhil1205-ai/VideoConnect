@@ -1,0 +1,105 @@
+body{
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    font-family: 'Segoe UI', sans-serif;
+}
+.lobbyContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    font-family: 'Segoe UI', sans-serif;
+    text-align:center;
+    padding : 10px
+}
+
+
+.meetVideoContainer {
+    position: relative;
+    width: calc(100% - 100px);
+    height: calc(100vh - 40px);
+    margin: 10px auto;
+    background: rgb(1, 4, 48);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: 1fr 380px; 
+}
+
+/* ================= VIDEO AREA ================= */
+.conferenceView {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 1 rem;
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.conferenceView video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+    border-radius: 12px;
+    background: black;
+    transform: scaleX(-1);      
+}
+
+/* ================= SELF VIDEO ================= */
+.meetUserVideo {
+    position: absolute;
+    bottom: 20px;
+    right: 10px; 
+    width: 350px;
+    height: 250px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    z-index: 10;
+    transform: scaleX(-1);
+}
+
+
+/* ================= CONTROLS ================= */
+.buttonContainers {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+/* ================= CHAT ================= */
+
+.chatRoom{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    border-radius: 0 20px 20px 0;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+     overflow-y: auto;   
+}
+
+.chatContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chattingArea {
+    margin-top: auto;
+    padding-bottom: 10px;
+    height: 100px;
+}
+
+
+

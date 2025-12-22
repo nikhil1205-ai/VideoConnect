@@ -1,0 +1,67 @@
+   
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .left-panel {
+      background: linear-gradient(180deg, #6366f1, #3b82f6);
+      color: white;
+      padding: 3rem;
+    }
+
+    .left-panel h1 {
+      font-weight: 700;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .feature i {
+      margin-right: 10px;
+      font-size: 28px;
+    }
+
+    .right-panel {
+      padding: 3rem;
+    }
+
+    .btn-primary {
+      background-color: #4f46e5;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .btn-outline-secondary {
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .btn-guest {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background-color: #4f46e5;
+      transition: 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      .left-panel {
+        display: none;
+      }
+    }
+
+
+
