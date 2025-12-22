@@ -13,11 +13,11 @@ function App() {
     <BrowserRouter>
      <AuthProvider>
       <Routes>
-        <Route path='https://videoconnect-qgb9.onrender.com/' element={<Landing/>}/>
-        <Route path='https://videoconnect-qgb9.onrender.com/auth' element={<Athentication/>}/>
-        <Route path='https://videoconnect-qgb9.onrender.com/:url' element={<VideoMeet/>}/>
-        <Route path='https://videoconnect-qgb9.onrender.com/home' element={<Home/>}/>
-        <Route path='https://videoconnect-qgb9.onrender.com/history' element={<History/>}/>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/auth' element={<Athentication/>}/>
+        <Route path='/:url' element={<VideoMeet/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/history' element={<History/>}/>
       </Routes>
      </AuthProvider>
     </BrowserRouter>
