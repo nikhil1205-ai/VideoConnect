@@ -7,7 +7,7 @@ const BASE_URL =
     ? "https://videoconnect-qgb9.onrender.com"
     : "http://localhost:8080";
 
-console.log(BASE_URL);
+console.log("Backend Api :- ",BASE_URL);
 export default axios.create({
   baseURL: BASE_URL,
   withCredentials: true,

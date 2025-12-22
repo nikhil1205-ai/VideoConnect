@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import  styles from "../style/VideoMeet.module.css";
 import { TextField,Button } from '@mui/material';
 import io from "socket.io-client";
-
 import { Badge, IconButton } from '@mui/material';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff'
@@ -13,7 +12,7 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
 
-const server_url = "http://localhost:8080/";
+const server_url = "https://videoconnect-qgb9.onrender.com";
 
 var connections = {};
 

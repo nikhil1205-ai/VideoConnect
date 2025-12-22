@@ -1,14 +1,13 @@
 import dotenv from "dotenv";
 dotenv.config("../.env");
-import express from "express"
-import {createServer} from "node:http"
+import express from "express";
+import {createServer} from "node:http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
-import {ConnectToSocket} from "./controllers/socketManager.js"
-import User from "./routes/User.js"
+import {ConnectToSocket} from "./controllers/socketManager.js";
+import User from "./routes/User.js";
 import cors from 'cors';
 
-// Initialization
 const app=express();
 const server=createServer(app);
 const io=ConnectToSocket(server);
