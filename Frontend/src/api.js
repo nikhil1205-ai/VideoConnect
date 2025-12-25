@@ -10,5 +10,5 @@ const BASE_URL =
 console.log("Backend Api :- ",BASE_URL);
 export default axios.create({
   baseURL: BASE_URL,
-  
+  withCredentials: true,
 });
