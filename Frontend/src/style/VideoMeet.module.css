@@ -57,7 +57,7 @@ body {
 /* ================= SELF VIDEO ================= */
 .meetUserVideo {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     right: 10px;
 
     width: clamp(180px, 25vw, 350px);
@@ -73,7 +73,7 @@ body {
 /* ================= CONTROLS ================= */
 .buttonContainers {
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
     left: 0;
     right: 0;
     text-align: center;
@@ -142,8 +142,8 @@ body {
     }
 
     .meetUserVideo {
-        width: 140px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         bottom: 80px;
         right: 10px;
     }
