@@ -1,16 +1,25 @@
-body{
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
     background: linear-gradient(135deg, #4f46e5, #06b6d4);
     font-family: 'Segoe UI', sans-serif;
 }
+
+/* ================= LOBBY ================= */
 .lobbyContainer {
     min-height: 100vh;
     background: linear-gradient(135deg, #4f46e5, #06b6d4);
     font-family: 'Segoe UI', sans-serif;
-    text-align:center;
-    padding : 10px
+    text-align: center;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
+/* ================= MAIN MEET ================= */
 .meetVideoContainer {
     position: relative;
     width: calc(100% - 100px);
@@ -20,15 +29,16 @@ body{
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
     display: grid;
-    grid-template-columns: 1fr 380px; 
+    grid-template-columns: 1fr 380px;
 }
 
-/* ================= VIDEO AREA ================= */
+/* ================= VIDEO GRID ================= */
 .conferenceView {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-auto-rows: 1 rem;
+    grid-auto-rows: 650px; /* FIXED (was invalid) */
     gap: 10px;
     padding: 10px;
     height: 100%;
@@ -38,26 +48,27 @@ body{
 .conferenceView video {
     width: 100%;
     height: 100%;
-    object-fit: cover;    
+    object-fit: cover;
     border-radius: 12px;
     background: black;
-    transform: scaleX(-1);      
+    transform: scaleX(-1);
 }
 
 /* ================= SELF VIDEO ================= */
 .meetUserVideo {
     position: absolute;
     bottom: 20px;
-    right: 10px; 
-    width: 350px;
-    height: 250px;
+    right: 10px;
+
+    width: clamp(180px, 25vw, 350px);
+    height: clamp(120px, 18vw, 250px);
+
     border-radius: 14px;
     object-fit: cover;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     z-index: 10;
     transform: scaleX(-1);
 }
-
 
 /* ================= CONTROLS ================= */
 .buttonContainers {
@@ -74,19 +85,22 @@ body{
 }
 
 /* ================= CHAT ================= */
-
-.chatRoom{
-    background: rgb(255, 255, 255);
+.chatRoom {
+    background: white;
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 10;
+
     border-radius: 0 20px 20px 0;
     padding-inline: 20px;
+
+    width: clamp(260px, 30vw, 380px);
+    height: clamp(300px, 50vh, 420px);
+
     display: flex;
     flex-direction: column;
-    height: 400px;
-     overflow-y: auto;   
+    overflow-y: auto;
 }
 
 .chatContainer {
@@ -101,5 +115,45 @@ body{
     height: 100px;
 }
 
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+    .meetVideoContainer {
+        grid-template-columns: 1fr;
+    }
 
+    .chatRoom {
+        right: 10px;
+        top: 10px;
+    }
+}
 
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .meetVideoContainer {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .conferenceView {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 400px;
+    }
+
+    .meetUserVideo {
+        width: 140px;
+        height: 100px;
+        bottom: 80px;
+        right: 10px;
+    }
+
+    .chatRoom {
+        width: 100%;
+        height: 60vh;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        border-radius: 20px 20px 0 0;
+    }
+}

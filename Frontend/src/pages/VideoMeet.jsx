@@ -455,7 +455,7 @@ function VideoMeet() {
        
 :<div className={styles.meetVideoContainer}>
 
-                    {showModal ? <div className={styles.chatRoom}>
+                    {!showModal ? <div className={styles.chatRoom}>
 
                         <div className={styles.chatContainer}>
                             <h1>Chat</h1>
@@ -501,7 +501,7 @@ function VideoMeet() {
                             </IconButton> : <></>}
 
                         <Badge badgeContent={newMessages} max={999} color='orange'>
-                            <IconButton onClick={() => setModal(!showModal)} style={{ color: "white" }}>
+                            <IconButton onClick={() => setModal(!showModal)} style={{ color: "red" }}>
                                 <ChatIcon />                        </IconButton>
                         </Badge>
 
