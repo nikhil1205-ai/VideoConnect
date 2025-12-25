@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState,useNavigate} from 'react'
 import  styles from "../style/VideoMeet.module.css";
 import { TextField,Button } from '@mui/material';
 import io from "socket.io-client";
@@ -41,6 +41,8 @@ function VideoMeet() {
     let [username, setUsername] = useState("");
     const videoRef = useRef([])
     let [videos, setVideos] = useState([])
+
+    const navigate = useNavigate();
 
 
     useEffect(()=>{
@@ -386,7 +388,7 @@ function VideoMeet() {
             let tracks = localVideoref.current.srcObject.getTracks()
             tracks.forEach(track => track.stop())
         } catch (e) { }
-        window.location.href = "/home"
+        navigate("/home");
     }
 
 
